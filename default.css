@@ -81,6 +81,7 @@ grid-template-areas:
 }
 
 .nav-wrapper{
+    border: 1px solid var(--borderColor);
     grid-area: nav-wrapper;
 border-bottom: 1px solid var(--borderColor);
 display: flex;
@@ -112,9 +113,9 @@ background-color: var(--borderColor);
     /*Inline the dots with a margin*/
     margin: 5px;
 
--webkit-box-shadow: 17px 12px 10px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 17px 12px 10px 0px rgba(0,0,0,0.75);
-box-shadow: 17px 12px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
+    -moz-box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
+    box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
 }
 
 .left-column{
