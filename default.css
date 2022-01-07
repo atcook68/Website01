@@ -56,8 +56,7 @@ h6{font-size: 16px;}
 .greeting-wrapper{
     display: grid;
     text-align: center;
-    justify-content: center;
-
+    align-content: center;
     min-height: 10em
 }
 /* Making the container for the wrapper*/
@@ -130,8 +129,30 @@ background-color: var(--borderColor);
 
 .left-column{
     grid-area: left-column;
-
 }
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+height: 200px;
+width: 200px;
+object-fit: cover;
+border: 2px solid var(--borderColor);
+}
+
+.theme-dot{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+
+    -webkit-box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
+    -moz-box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
+    box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
+
+    cursor: pointer;
+}
+
+
 .right-column{
     grid-area: right-column;
 
