@@ -1,51 +1,73 @@
 :root{
-    --mainColor:#eaeaea;
-    --secondaryColor:#fff;
+	--mainColor:#eaeaea;
+	--secondaryColor:#fff;
 
-    --borderColor:#c1c1c1;
-    --mainText:black;
-    --secondaryText:#4b5155;
+	--borderColor:#c1c1c1;
+
+	--mainText:black;
+	--secondaryText:#4b5156;
+
+	--themeDotBorder:#24292e;
+
+	--previewBg:rgb(251, 249, 243, 0.8);
+	--previewShadow:#f0ead6;
+
+
+	--buttonColor:black;
+
+
 }
+
 
 html, body{
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
 
+body *{
+	transition: 0.3s;
 }
-h1,h2,h3,h4,h5,h6,strong{
-color: var(--mainText);
-font-family: 'Oswald', sans-serif;
-font-weight: 500;
-}
-p,li, span, label,input, textarea{
-    color: var(--secondaryText);
 
-    font-family: 'Roboto Mono', monospace;
+
+h1, h2, h3, h4, h5, h6, strong{
+	color: var(--mainText);
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
 }
+
+p, li, span, label, input, textarea{
+	color: var(--secondaryText);
+	font-family: 'Roboto Mono', monospace;
+}
+
 a{
-    text-decoration: none;
-    color:#17a2b8;
-}
-ul{
-    list-style: none;
+	text-decoration: none;
+	color:#17a2b8;
 }
 
-h1{font-size: 56px;}
-h2{font-size: 36px;}
-h3{font-size: 28px;}
-h4{font-size: 24px;}
-h5{font-size: 20px;}
-h6{font-size: 16px;}
+ul{
+	list-style: none;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 20px;}
+h6 { font-size: 16px;}
+
 
 .s1{
-    background-color:var(--mainColor);
-    border-bottom:1px solid var(--borderColor);
-    overflow: auto;
+	background-color: var(--mainColor);
+	border-bottom:1px solid var(--borderColor);
+	overflow:auto;
 }
+
 .s2{
-    background-color:var(--secondaryColor);
-    border-bottom:1px solid var(--borderColor);
-    overflow: auto;
+	background-color: var(--secondaryColor);
+	border-bottom:1px solid var(--borderColor);
+	overflow:auto;
 }
 
 .main-container{
@@ -64,7 +86,6 @@ h6{font-size: 16px;}
 border-radius: 5px 5px 0 0;
 background-color: var(--secondaryColor);
 border: 1px solid var(--borderColor);
-
 
 -webkit-box-shadow: 17px 12px 10px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 17px 12px 10px 0px rgba(0,0,0,0.75);
@@ -86,7 +107,7 @@ border-bottom: 1px solid var(--borderColor);
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: var(--borderColor);
+background-color: var(--mainColor);
 }
 
 #navigation{
@@ -136,7 +157,7 @@ background-color: var(--borderColor);
 height: 200px;
 width: 200px;
 object-fit: cover;
-border: 2px solid var(--borderColor);
+border: 3px solid var(--borderColor);
 }
 
 .theme-dot{
