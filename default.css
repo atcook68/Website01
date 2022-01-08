@@ -11,10 +11,10 @@
 
 	--previewBg:rgb(251, 249, 243, 0.8);
 	--previewShadow:#f0ead6;
-
+    --previewBackground: rgba(245, 242, 234, 0.8);
 
 	--buttonColor:black;
-
+    --themeDotBorder:#24292e;
 
 }
 
@@ -150,6 +150,8 @@ background-color: var(--mainColor);
 
 .left-column{
     grid-area: left-column;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 #profile_pic{
     display: block;
@@ -160,11 +162,18 @@ object-fit: cover;
 border: 3px solid var(--borderColor);
 }
 
+#theme-options-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
 .theme-dot{
     height: 30px;
     width: 30px;
     border-radius: 50%;
     background-color: black;
+    margin: 5px;
+    border: 2px solid var(--themeDotBorder);
 
     -webkit-box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
     -moz-box-shadow: 10px 10px 2px 0px rgba(168,168,168,0.48);
@@ -173,10 +182,74 @@ border: 3px solid var(--borderColor);
     cursor: pointer;
 }
 
+.theme-dot:hover{
+    border-width: 7px;
+}
+
+#light-mode{
+    background-color: #fff;
+}
+#blue-mode{
+    background-color: #192734;
+}
+#green-mode{
+    background-color: #78866b;
+}
+#purple-mode{
+    background-color: #7e4c74;
+}
+#settings-note{
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+}
+
 
 .right-column{
     grid-area: right-column;
+    display: grid;
+    align-content: center;
+}
+#preview-shadow{ 
+background-color: var(--previewShadow);
+width: 300px;
+height: 150px;
+padding-left: 30px;
+padding-top: 30px;
+}
 
+#preview{
+width: 300px;
+border: 2px solid #17a2b8;
+background-color: var(--previewBackground);
+padding: 15px;
+position: relative;
+}
+.corner{
+    border-radius: 50%;
+    border: 2px solid #17a2b8;
+    background-color: #fff;
+    height:7px;
+    width: 7px;
+    /*Using absolute positioning to move the dots to the corners.*/
+    position: absolute;
+    
+}
+#corner-topleft{
+    top: -5px;
+    left: -5px;
+}
+#corner-topright{
+    top: -5px;
+    right: -5px;
+}
+#corner-bottomleft{
+    bottom: -5px;
+    left: -5px;
+}
+#corner-bottomright{
+    bottom: -5px;
+    right: -5px;
 }
 /* 
 I want to keep the text in place when the user
@@ -186,5 +259,19 @@ expands/shrinks the tab. Mobile-responsiveness.
     .main-container{
         width: 95%;
         
+    }
+}
+/*When the user shrinks the tab*/
+@media screen and (max-width: 800px){
+    .intro-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'nav-wrapper'
+        'left-column'
+        'right-column'
+        ;
+    }
+    .right-column{
+        justify-content: center;
     }
 }
