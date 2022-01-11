@@ -253,6 +253,28 @@ position: relative;
     bottom: -5px;
     right: -5px;
 }
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* auto fit columns into the row, repeating action. */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#skill{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--previewShadow);
+}
+
+.social-media{
+    display: grid;
+    align-content: center;
+}
+
+#Twitter-snippet{
+    width: 50%;
+}
 /* 
 I want to keep the text in place when the user
 expands/shrinks the tab. Mobile-responsiveness.
